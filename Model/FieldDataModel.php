@@ -30,10 +30,10 @@ class FieldDataModel extends Base
     }
 
     public function getName($field){
-        if ($GLOBALS["configs"]["CUSTOMIZED_FIELD_NAMES"][$field]){
+        if (!empty($GLOBALS["configs"]["CUSTOMIZED_FIELD_NAMES"][$field])){
             return $GLOBALS["configs"]["CUSTOMIZED_FIELD_NAMES"][$field];
         }
-        if ($this->defaultNames[$field]){
+        if (!empty($this->defaultNames[$field])){
             return $this->defaultNames[$field]["name"];
         }
         $splited = explode("::METAMAGIK::", $field);
