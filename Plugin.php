@@ -37,7 +37,7 @@ class Plugin extends Base
 
     public function getPluginDescription()
     {
-        return t('A Kanboard plugin that provides a table view of your tasks in your project.');
+        return t('A Kanboard plugin that provides a table view of tasks in your project.');
     }
 
     public function getPluginAuthor()
