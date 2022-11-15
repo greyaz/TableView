@@ -1,5 +1,5 @@
 # Table View
-A [Kanboard](https://github.com/kanboard/kanboard) plugin that provides a table view of your tasks in your project.   
+A [Kanboard](https://github.com/kanboard/kanboard) plugin that provides a table view of the tasks in your project.   
 
 ![alt screenshot](Screenshot/1.png)
 
