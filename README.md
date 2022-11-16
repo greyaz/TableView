@@ -14,52 +14,49 @@ A [Kanboard](https://github.com/kanboard/kanboard) plugin that provides a table 
 
 ## Configuration Items
 
-#### $configs["HIDE_LIST_VIEW"] : Boolean
-Hide the list view or not. Default: true
+> #### $configs["HIDE_LIST_VIEW"] : Boolean
+> Hide the list view or not. Default: true
 
----
+> #### $configs["TABLE_FIELDS"] : Array
+> The fields display in the table by the sequence in this array:
+> ```php
+> $configs["TABLE_FIELDS"] = array(
+>     "::PRIORITY", "::TASK_ID", "::TITLE", "::COLUMN", "::ASSIGNEE", "::DUE_DATE", "::METAMAGIK::expected_launch_date"
+> );
+> ```
+> The following keywords are supported by default:
+> ```php
+> ::ASSIGNEE
+> ::CATEGORY
+> ::COLUMN
+> ::DUE_DATE
+> ::PRIORITY
+> ::POSITION
+> ::REFERENCE
+> ::START_DATE
+> ::SUBTASK_NUMBER
+> ::SWIMLANE
+> ::TAG
+> ::TASK_ID
+> ::TITLE
+> ```
+> The following keywords are supported after installing the plugin "Group_assign":
+> ```php
+> ::ASSIGNED_GROUP
+> ::OTHER_ASSIGNEES
+> ```
+> If the plugin "metaMagik" is installed, your custom field can be loaded via the prefix "::METAMAGIK::" with your field name. Example:
+> ```php
+> ::METAMAGIK::expected_launch_date
+> ```
 
-#### $configs["TABLE_FIELDS"] : Array
-The fields display in the table by the sequence in this array:
-```php
-$configs["TABLE_FIELDS"] = array(
-    "::PRIORITY", "::TASK_ID", "::TITLE", "::COLUMN", "::ASSIGNEE", "::DUE_DATE", "::METAMAGIK::expected_launch_date"
-);
-```
-The following keywords are supported by default:
-```php
-::ASSIGNEE
-::CATEGORY
-::COLUMN
-::DUE_DATE
-::PRIORITY
-::POSITION
-::REFERENCE
-::START_DATE
-::SUBTASK_NUMBER
-::SWIMLANE
-::TAG
-::TASK_ID
-::TITLE
-```
-The following keywords are supported after installing the plugin "Group_assign":
-```php
-::ASSIGNED_GROUP
-::OTHER_ASSIGNEES
-```
-If the plugin "metaMagik" is installed, your custom field can be loaded via the prefix "::METAMAGIK::" with your field name. Example:
-```php
-::METAMAGIK::expected_launch_date
-```
----
-
-#### $configs["CUSTOMIZED_FIELD_NAMES"] : Array
-Optional. Customize the names of the fields. Example:
-```php
-$configs["CUSTOMIZED_FIELD_NAMES"] = array(
-    "::COLUMN" => "Progress",
-);
-```
+> #### $configs["CUSTOMIZED_FIELD_NAMES"] : Array
+> Optional. Customize the names of the fields. Example:
+> ```php
+> $configs["CUSTOMIZED_FIELD_NAMES"] = array(
+>     "::COLUMN" => "Progress",
+> );
+> ```
 
 ## Author
 Greyaz
