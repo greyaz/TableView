@@ -14,7 +14,7 @@ A [Kanboard](https://github.com/kanboard/kanboard) plugin that provides a table 
 
 ## Configuration Items
 
-> #### $configs["HIDE_LIST_VIEW"] : Boolean
+**$configs["HIDE_LIST_VIEW"] : Boolean**
 > Hide the list view or not. Default: true
 > ```php
 > $configs["HIDE_LIST_VIEW"] = true;
@@ -22,7 +22,7 @@ A [Kanboard](https://github.com/kanboard/kanboard) plugin that provides a table 
 
 <br/>
 
-> #### $configs["TABLE_FIELDS"] : Array
+**$configs["TABLE_FIELDS"] : Array**
 > The fields display in the table by the sequence in this array:
 > ```php
 > $configs["TABLE_FIELDS"] = array(
@@ -53,7 +53,7 @@ A [Kanboard](https://github.com/kanboard/kanboard) plugin that provides a table 
 
 <br/>
 
-> #### $configs["CUSTOMIZED_FIELD_NAMES"] : Array
+**$configs["CUSTOMIZED_FIELD_NAMES"] : Array**
 > Optional. Customize the names of the fields. Example:
 > ```php
 > $configs["CUSTOMIZED_FIELD_NAMES"] = array(
