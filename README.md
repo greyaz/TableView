@@ -17,6 +17,8 @@ A [Kanboard](https://github.com/kanboard/kanboard) plugin that provides a table 
 > #### $configs["HIDE_LIST_VIEW"] : Boolean
 > Hide the list view or not. Default: true
 
+<br/>
+
 > #### $configs["TABLE_FIELDS"] : Array
 > The fields display in the table by the sequence in this array:
 > ```php
@@ -49,6 +51,8 @@ A [Kanboard](https://github.com/kanboard/kanboard) plugin that provides a table 
 > ```php
 > ::METAMAGIK::expected_launch_date
 > ```
+
+<br/>
 
 > #### $configs["CUSTOMIZED_FIELD_NAMES"] : Array
 > Optional. Customize the names of the fields. Example:
