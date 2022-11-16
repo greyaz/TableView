@@ -16,6 +16,9 @@ A [Kanboard](https://github.com/kanboard/kanboard) plugin that provides a table 
 
 > #### $configs["HIDE_LIST_VIEW"] : Boolean
 > Hide the list view or not. Default: true
+> ```php
+> $configs["HIDE_LIST_VIEW"] = true;
+> ```
 
 <br/>
 
@@ -27,7 +30,6 @@ A [Kanboard](https://github.com/kanboard/kanboard) plugin that provides a table 
 > );
 > ```
 > The following keywords are supported by default:
-> ```php
 > ::ASSIGNEE
 > ::CATEGORY
 > ::COLUMN
@@ -41,16 +43,13 @@ A [Kanboard](https://github.com/kanboard/kanboard) plugin that provides a table 
 > ::TAG
 > ::TASK_ID
 > ::TITLE
-> ```
+> 
 > The following keywords are supported after installing the plugin "Group_assign":
-> ```php
 > ::ASSIGNED_GROUP
 > ::OTHER_ASSIGNEES
-> ```
+> 
 > If the plugin "metaMagik" is installed, your custom field can be loaded via the prefix "::METAMAGIK::" with your field name. Example:
-> ```php
 > ::METAMAGIK::expected_launch_date
-> ```
 
 <br/>
 
