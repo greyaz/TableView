@@ -30,26 +30,26 @@ A [Kanboard](https://github.com/kanboard/kanboard) plugin that provides a table 
 > );
 > ```
 > The following keywords are supported by default:
-> ::ASSIGNEE
-> ::CATEGORY
-> ::COLUMN
-> ::DUE_DATE
-> ::PRIORITY
-> ::POSITION
-> ::REFERENCE
-> ::START_DATE
-> ::SUBTASK_NUMBER
-> ::SWIMLANE
-> ::TAG
-> ::TASK_ID
-> ::TITLE
+> - ::ASSIGNEE
+> - ::CATEGORY
+> - ::COLUMN
+> - ::DUE_DATE
+> - ::PRIORITY
+> - ::POSITION
+> - ::REFERENCE
+> - ::START_DATE
+> - ::SUBTASK_NUMBER
+> - ::SWIMLANE
+> - ::TAG
+> - ::TASK_ID
+> - ::TITLE
 > 
 > The following keywords are supported after installing the plugin "Group_assign":
-> ::ASSIGNED_GROUP
-> ::OTHER_ASSIGNEES
+> - ::ASSIGNED_GROUP
+> - ::OTHER_ASSIGNEES
 > 
 > If the plugin "metaMagik" is installed, your custom field can be loaded via the prefix "::METAMAGIK::" with your field name. Example:
-> ::METAMAGIK::expected_launch_date
+> - ::METAMAGIK::expected_launch_date
 
 <br/>
 
