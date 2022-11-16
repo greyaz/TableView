@@ -23,12 +23,17 @@ A [Kanboard](https://github.com/kanboard/kanboard) plugin that provides a table 
 <br/>
 
 **$configs["TABLE_FIELDS"] : Array**
-> The fields display in the table by the sequence in this array:
+> The fields display in the table by the sequence in this array.
 > ```php
 > $configs["TABLE_FIELDS"] = array(
 >     "::PRIORITY", "::TASK_ID", "::TITLE", "::COLUMN", "::ASSIGNEE", "::DUE_DATE", "::METAMAGIK::expected_launch_date"
 > );
 > ```
+> Codes above will generate a table like this:
+> |     | Priority | Task ID | Title | Column | Assignee | Due Date | Expected Lunch Date |
+> | --- | -------- | ------- | ----- | ------ | -------- | -------- | ------------------- |
+> | [ ] | P2       | 123     | XXX   | XXX    | XXX      | XXX      | XXX                 |
+> 
 > The following keywords are supported by default:
 > - ::ASSIGNEE
 > - ::CATEGORY
