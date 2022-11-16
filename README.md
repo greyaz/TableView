@@ -4,8 +4,9 @@ A [Kanboard](https://github.com/kanboard/kanboard) plugin that provides a table 
 ![alt screenshot](Screenshot/1.png)
 
 ## Features
-1. Customizable table fields
-2. Compatible with the plugins "Group_assigne" and "metaMagik"
+1. Hide orignal list view or not
+2. Customizable table fields
+3. Compatible with the plugins "Group_assigne" and "metaMagik"
 
 ## Getting started
 1. Install from the Kanboard plugin manager directly. Or clone this repository to your plugin folder.
