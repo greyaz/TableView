@@ -1,10 +1,15 @@
 <div class="table-list-header">
     <div class="table-list-header-count">
+    <b>
         <?php if ($paginator->getTotal() > 1): ?>
             <?= t('%d tasks', $paginator->getTotal()) ?>
         <?php else: ?>
             <?= t('%d task', $paginator->getTotal()) ?>
         <?php endif ?>
+    </b>
+    </div>
+    <div class="list-item-links">
+        <a href="<?= $this->url->href('ExportController', 'export', ['plugin' => 'TableView', 'project_id' => $project['id'], 'count' => $paginator->getTotal()]) ?>"><?= t('Export All') ?></a>
     </div>
     <?php if (isset($show_items_selection)): ?>
         <?php if ($this->user->hasProjectAccess('TaskModificationController', 'save', $project['id'])): ?>

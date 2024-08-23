@@ -14,6 +14,8 @@ class Plugin extends Base
             global $configs;
             require_once('plugins/TableView/config.php');
 
+            $this->helper->register('tableDataHelper', '\Kanboard\Plugin\TableView\Helper\TableDataHelper');
+
             $this->template->hook->attach('template:project-header:view-switcher', 'TableView:project_header/views');
             $this->hook->on('template:layout:css', array('template' => 'plugins/TableView/Asset/main.css'));
             $this->hook->on('template:layout:js', array('template' => 'plugins/TableView/Asset/main.js'));
@@ -47,7 +49,7 @@ class Plugin extends Base
 
     public function getPluginVersion()
     {
-        return '0.1.0';
+        return '0.2.0';
     }
 
     public function getPluginHomepage()

@@ -26,7 +26,7 @@
                     <?php foreach ($paginator->getCollection() as $task): ?>
                         <?php
                             $metadata = array();
-                            if ($task['nb_metadata'] > 0){
+                            if (isset($task['nb_metadata']) && $task['nb_metadata'] > 0){
                                 $custom_fields = $this->task->metadataTypeModel->getAllInScope($task['project_id']);
                                 foreach ($custom_fields as $custom_field){
                                     if (!empty($this->task->taskMetadataModel->get($task['id'], $custom_field['human_name'], ''))){

@@ -20,35 +20,23 @@ class TableViewController extends BaseController
     {
         $project = $this->getProject();
         $search = $this->helper->projectHeader->getSearchQuery($project);
-
-        if ($this->request->getStringParam('direction') !== '' ||
-            $this->request->getStringParam('order') !== '') {
+        
+        $req_direction = $this->request->getStringParam('direction');
+        $req_order = $this->request->getStringParam('order');
+        if (!empty($req_direction) || !empty($req_order)) {
             $this->checkReusableGETCSRFParam();
         }
 
         list($order, $direction) = $this->userSession->getListOrder($project['id']);
-        $direction = $this->request->getStringParam('direction', $direction);
-        $order = $this->request->getStringParam('order', $order);
+        if (!empty($req_direction)){
+            $direction = $req_direction;
+        }
+        if (!empty($req_order)){
+            $order = $req_order;
+        }
         $this->userSession->setListOrder($project['id'], $order, $direction);
 
-        $paginator = $this->paginator
-            ->setUrl('TableViewController', 'show', array(
-                'project_id' => $project['id'], 
-                'search'        => $search, 
-                'plugin'        => 'TableView',
-                'csrf_token' => $this->token->getReusableCSRFToken()
-            ))
-            ->setMax(30)
-            ->setOrder($order)
-            ->setDirection($direction)
-            ->setFormatter($this->taskListSubtaskFormatter)
-            ->setQuery($this->taskLexer
-                ->build($search)
-                ->withFilter(new TaskProjectFilter($project['id']))
-                ->getQuery()
-            )
-            ->calculate();
-
+        $paginator = $this->helper->tableDataHelper->getPaginator($project['id'], $search, 30, $order, $direction);
         $fieldNames = array();
         foreach($GLOBALS["configs"]["TABLE_FIELDS"] as $field){
             $fieldNames[] = $this->fieldDataModel->getName($field);
