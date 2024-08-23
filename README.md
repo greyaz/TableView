@@ -7,6 +7,7 @@ A [Kanboard](https://github.com/kanboard/kanboard) plugin that provides a table 
 1. Hide orignal list view or not
 2. Customizable table fields
 3. Compatible with the plugins "Group_assigne" and "metaMagik"
+4. Export tasks
 
 ## Getting started
 1. Install from the Kanboard plugin manager directly. Or clone this repository to your plugin folder.
